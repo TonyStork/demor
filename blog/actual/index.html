@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  My first post, actually
+</h1>
+<p class="subtitle"><strong>2023-02-19</strong></p>
+<h1 id="node-red-ui-first-impressions">Node-Red UI - first impressions</h1>
+<p><strong>Hi all,</strong></p>
+<p>my name is <em>Milan Kochan</em> and I would like to share my experience with <strong>Node-Red</strong> as I've started to work with this platform for first time in my life.
+I don't see myself as an experienced programmer at all, even it is my field of study for last two years. Basic knowledge of programming languages such as <em>C++</em>, <em>PHP</em> or <em>HTML</em> was good starting point for me. 
+Initial aim for me was <strong><em>to make fully compatible Node-Red user interface page</em></strong> which can send commands to external device and recieve data as well.</p>
+<h3 id="so-my-firts-step">So my firts step</h3>
+<p>Thanks to <a href="https://nodered.org/">Node-Red's official website</a>, installation wasn't anything I had problem with. Instructions were clear, internet connection was stable, so in few minutes I was able to run Node-Red on my localhost address.
+After successful installation, I need to install module (nodes) that will add possibility to create dashboard in my flows. </p>
+<h3 id="step-back">Step back</h3>
+<p>Here I met first problem, as my version of Node-Red wasn't supporting dashboard's version.
+So I need to take step back, well, actually two, because as I re-installed version of Node-Red, Node.js didn't support it, so I had to re-install Node.js, too. Fortunately, after these actions I was able to install dashboard succesfully, so I could start make flows that need to be done.</p>
+<h3 id="node-red">Node-Red</h3>
+<p>Official website of Node-Red treats newbies really nice because offers many <a href="https://nodered.org/docs/">tutorials</a> <em>&quot;how to make flows&quot;</em>. My first go-to-flow was, surprisingly, <em>Hello World!</em>, as I was curious how I can connect different nodes, so they can communicate between each other, send right information and show it in dashboard.
+This was incredibly easy to do, as nodes visually represents part of codes, that you don't have to connect through code manually, but automatically create link between them, so no more coding is required. 
+So <em>voilà</em>, I can send information from flow to dashboard and actually see it. Nice. Then I made dashboard button that will send information, so after pressing &quot;Hello World!&quot; button message appears. Nice.</p>
+<h3 id="dashboard">Dashboard</h3>
+<p>Next step was clear - find a way <strong>to connect dashboard with TCP/IP Slave Simulator</strong>, so they will interact between each other. I installed <strong><em>node-red-contrib-modbus node</em></strong>, that allow me to create nodes which communicate with simulator through ports. 
+There are various types of adresses in simulator, so it is possible to differ your registers based on the type of data you want to use. I used two types, <strong>input</strong> and <strong>holding</strong> registers.</p>
+<p><strong><em>Input</em></strong> ones were recieving data from simulator, so I had to make nodes, that will be continuously reading adressess and when something change, they will show change in dashboard.</p>
+<p><strong><em>Holding</em></strong> ones were changing values in simulator, so after pressing button (yes, that's why I try to make button before), value in simulator will change from 0 to 1, or backwards.</p>
+<p>After I succesfully connected all nodes, final visual presentation fulfilled my previously specified goal, as I was able to communicate with device through Node-Red's daschboard.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Whole idea of using nodes is really good way how to make programming more comprehensible, also newcomer like me really appreciate paltform like this, with addition of still-expanding commuinty that will help you with any kind of problem you ran into, I see Node-Red as <strong><em>easy-to-use platform</em></strong> to work with. </p>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
